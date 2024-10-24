@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="Upload Responses via Excel" icon-name="custom:custom63">
+        <div class="slds-p-around_medium">
+            <div class="slds-grid slds-gutters">
+                <!-- Form to enter Survey Name -->
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <lightning-input label="Survey Name"
+                                     value={surveyName}
+                                     onchange={handleSurveyNameChange}
+                                     required
+                                     class="slds-m-bottom_medium">
+                    </lightning-input>
+                </div>
+
+                <!-- Upload Excel File -->
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <lightning-input type="file"
+                                     label="Upload Excel File"
+                                     accept=".xlsx"
+                                     onchange={handleFileUpload}
+                                     class="slds-m-bottom_medium">
+                    </lightning-input>
+                </div>
+            </div>
+
+            <!-- Process File Button -->
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-align_absolute-center">
+                    <lightning-button label="Process File"
+                                      variant="brand"
+                                      onclick={processFile}
+                                      disabled={isButtonDisabled}
+                                      class="slds-m-top_medium slds-m-horizontal_small">
+                    </lightning-button>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

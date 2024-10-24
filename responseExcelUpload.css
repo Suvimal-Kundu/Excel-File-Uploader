@@ -1,0 +1,12 @@
+.slds-card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.slds-m-bottom_medium {
+    margin-bottom: 1rem;
+}
+
+.slds-m-horizontal_small {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
